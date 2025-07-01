@@ -1,0 +1,25 @@
+body {
+  background-color: #043959;
+  color: white;
+}
+h1 {
+  text-align: center;
+}
+.logo-funval {
+  height: 70px;
+}
+img {
+  border-radius: 100%;
+}
+.lista {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.subtitulo {
+  font-size: 40px;
+}
+.logo-funval {
+  border-radius: 0%;
+}
