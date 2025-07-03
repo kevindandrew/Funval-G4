@@ -32,10 +32,65 @@ li {
   border-radius: 100%;
 }
 main {
-  background-color: beige;
-  height: 90%;
+  background-color: #f5efef;
+  display: flex;
+  flex-direction: column;
+}
+.blurred-edges {
+  height: 300px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(ellipse at center, black 60%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+.hero {
+  display: flex;
+}
+.msg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.hero-titule {
+  font-size: 80px;
+  color: brown;
+}
+.hero-pa {
+  font-size: 20px;
+  color: brown;
+}
+.hero-btn {
+  padding: 8px;
+  background-color: brown;
+  color: white;
+  border: none;
+}
+.cards-container {
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  place-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 footer {
-  background-color: blueviolet;
+  background-color: white;
   height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
