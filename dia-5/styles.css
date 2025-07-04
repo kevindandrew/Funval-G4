@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  background-color: beige;
+}
+.caja {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.caja1 {
+  background-color: cadetblue;
+}
+.caja2 {
+  background-color: aqua;
+}
+.caja3 {
+  background-color: chocolate;
+}
+.caja4 {
+  background-color: crimson;
+}
+.caja5 {
+  background-color: darkturquoise;
+}
+.caja6 {
+  background-color: darkcyan;
+}
+.caja7 {
+  background-color: gold;
+}
+.caja8 {
+  background-color: burlywood;
+}
+
+/* Extra small (xs) – menores a 576px */
+@media (max-width: 575.98px) {
+  /* estilos pantallas menores a 576px */
+  .container {
+    flex-direction: column;
+  }
+  .caja {
+    background-color: crimson;
+  }
+}
+
+/* Small (sm) – 576px o más */
+@media (min-width: 576px) {
+  .caja {
+    background-color: darkblue;
+    color: white;
+  }
+  .container {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Medium (md) – 768px o más */
+@media (min-width: 768px) {
+  .caja {
+    background-color: blue;
+  }
+}
+
+/* Large (lg) – 992px o más */
+@media (min-width: 992px) {
+  .caja {
+    background-color: blueviolet;
+  }
+}
+
+/* Extra large (xl) – 1200px o más */
+@media (min-width: 1200px) {
+}
+
+/* Extra extra large (xxl) – 1400px o más */
+@media (min-width: 1400px) {
+}
