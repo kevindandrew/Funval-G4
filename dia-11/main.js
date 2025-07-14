@@ -125,6 +125,22 @@ cuenta - 7; /* cuenta = cuenta -7 */
 cuenta * 2; /* cuenta = cuenta *2 */
 cuenta / 6; /* cuenta =cuenta /6 */
 
+/* Operador ternario  */
+a = 2;
+b = 7;
+a > b
+  ? console.log("a es mayor q b")
+  : console.log(
+      "b es mayor q a"
+    ); /* IF abreviado o condicional de una sola linea */
+
+/* 
+    condicion?
+    codigo a ejecutarse si la condicion es verdadera
+    :codigo a ejecutarse si la condicion es falsa
+
+*/
+
 /*OPERADORES LOGICOS  */
 
 // 1. Crea una variable para cada operación aritmética
