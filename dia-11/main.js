@@ -116,6 +116,15 @@ const jeff =
 /* una constante no se puede reasignar pero si se puede mutar el valor q tenga en su interior */
 const Benjamin = "estudiante1234";
 
+/* operadores de asignacion */
+let cuenta = 2;
+cuenta++; /* cuenta =cuenta +1 */
+cuenta--; /* cuenta = cuenta -1 */
+cuenta + 5; /* cuenta = cuenta +5 */
+cuenta - 7; /* cuenta = cuenta -7 */
+cuenta * 2; /* cuenta = cuenta *2 */
+cuenta / 6; /* cuenta =cuenta /6 */
+
 /*OPERADORES LOGICOS  */
 
 // 1. Crea una variable para cada operación aritmética
