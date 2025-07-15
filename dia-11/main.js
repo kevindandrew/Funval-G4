@@ -120,10 +120,10 @@ const Benjamin = "estudiante1234";
 let cuenta = 2;
 cuenta++; /* cuenta =cuenta +1 */
 cuenta--; /* cuenta = cuenta -1 */
-cuenta + 5; /* cuenta = cuenta +5 */
-cuenta - 7; /* cuenta = cuenta -7 */
-cuenta * 2; /* cuenta = cuenta *2 */
-cuenta / 6; /* cuenta =cuenta /6 */
+cuenta += 5; /* cuenta = cuenta +5 */
+cuenta -= 7; /* cuenta = cuenta -7 */
+cuenta *= 2; /* cuenta = cuenta *2 */
+cuenta /= 6; /* cuenta =cuenta /6 */
 
 /* Operador ternario  */
 a = 2;
@@ -163,3 +163,92 @@ a > b
 // 9. Utiliza el operador ternario
 
 // 10. Combina operadores aritméticos, de comparáción y lógicas
+
+/* combiancion de operadores logicos */
+/* signos de agrupacion de operadores */
+(a < b || b < a) && a === b; /* 4+5*7       4+35   o   9*7*/
+/* REFACTORIAZACION */
+/* (5*6)+(5*8)===5*(6+8) */
+(a < b || b == a) && (a < b || b > a);
+a < b && (b == a || b > a);
+/* ----------------------------------------------------------------------- */
+
+let suma = 12;
+let resta = 30;
+let multiplicacion = 45;
+let divison = 55;
+let potencia = 65;
+let modulo = 13;
+
+/* --------------------------------------------------- */
+
+let asignacionSuma = suma++;
+let asignacionResta = resta--;
+let asignacionMultiplicacion = (multiplicacion *= 5);
+let asignacionDivision = (divison /= 7);
+let asignacionModulo = (modulo %= 2);
+/* ---------------------------------------------------- */
+
+console.log(1 < 10);
+console.log(24 > 12);
+console.log(7 >= 7);
+console.log(2 <= 8);
+console.log(0 == "0");
+/* ----------------------------------------------- */
+console.log(!(1 < 10));
+console.log(!(24 > 12));
+console.log(!(7 >= 7));
+console.log(!(2 <= 8));
+console.log(!(0 == "0"));
+/* -------------------------------------------- */
+
+console.log(true && 0 === "0"); // false
+/* -------------------------------------------- */
+console.log(18 >= 17 || 17 >= 21); //true
+/* --------------------------------------------- */
+console.log((18 >= 17 || 17 >= 21) && 18 >= 16); /* TRUE */
+console.log((24 <= 24 || 32 < 322) && (18 < 20 || 32 == "32")); //TRUE
+console.log((24 <= 24 && 32 < 322) || (18 < 20 && 32 == "32")); //TRUE
+console.log((!(18 >= 17) || 17 >= 21) && 18 > 20 && 32 == "32"); //false
+console.log(
+  (true || false) && (322 === "322" || 322 == "322") && (18 <= 24 || 32 < 2) //TRUE
+);
+/* -------------------------------------------- */
+/* 
+  condicion
+  ? el codigo q se ejecuta si la condicion es Verdadera
+  : el codigo q se ejecuta si la condicion es Falsa
+*/
+/* dado un numero cualquiera determinar si es par o impar */
+/* VALORES Q SE TOMAN X FALSE SIEMPRE 0 "" NULL UNDIFINED FALSE*/
+let numeroCualquiera = 22;
+let condicionMala;
+numeroCualquiera % 2 === 0
+  ? console.log("este numero es par")
+  : console.log("este numero es impar");
+
+/* utilizando el operador ternario determinar 
+si una variable de tipo usuario y de tipo password 
+coinciden con admin y 123456 
+si el login es correcto mostrar datos correctos
+si el login falla en alguno de ambos o en ambos mostrar datos incorrectos
+*/
+
+/* verificar si un numero es positivo,negativo o si es cero */
+numeroCualquiera = "MENSAJE";
+numeroCualquiera > 0
+  ? console.log("es positivo")
+  : numeroCualquiera === 0
+  ? console.log("numero es 0")
+  : numeroCualquiera < 0
+  ? console.log("es negativo")
+  : console.log("ingresa un dato valido");
+
+/* 
+utilizando el operador ternario determinar 
+si una variable de tipo usuario y de tipo password 
+coinciden con admin y 123456 
+si el login es correcto mostrar datos correctos
+si el login falla cual de los datos esta fallando si el nombre de usuario 
+el password o ambos
+*/
