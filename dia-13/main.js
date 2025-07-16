@@ -65,7 +65,7 @@ let respuesta = sumando(3, 6); */
     crear una funcion q le muestre al cliente si su palabra es o no palindrome
 */
 
-let datoUsuario = prompt("ingresa tu palabra");
+/* let datoUsuario = prompt("ingresa tu palabra");
 
 let respuesta = sinEspacios(datoUsuario);
 respuesta = minusculas(respuesta);
@@ -107,7 +107,7 @@ function retornaResultado(booleano) {
     respuesta = "tu palabra no es palindrome";
   }
   return respuesta;
-}
+} */
 /* 
   GENERAR LA SERIE DE LOS NUMEROS PRIMOS ESTA SERIE SE CARACTERIZA X Q UN NUMERO PRIMO ES AQUEL
   Q SOLO ES DIVISIBLE ENTRE 1 Y EL MISMO DE LA CANTIDAD N Q INGRESE EL CLIENTE
@@ -118,4 +118,73 @@ function retornaResultado(booleano) {
   N=5
   2,3,5,7,11
   ahora deberan realizarlo con fUNCIONES
+*/
+
+/* DESAFIO GRUPAL 
+
+ Requerimientos del Restaurante “don baraton”
+
+El restaurante necesita un sistema simple que permita:
+
+Mostrar el menú del día (máximo 5 platos, sin usar arrays).
+
+Permitir que un cliente realice varios pedidos (repetir mientras desee).
+
+Calcular el precio según el plato elegido.
+
+Solicitar el nombre del cliente.
+
+Mostrar una factura final con el total a pagar por todos los platos.
+
+(Opcional +5PTS) Aplicar descuento del 5% si el total supera los $120.
+
+(Opcional +5PTS) Mostrar un mensaje especial si el cliente eligió “Tacos”.
+
+(Opcional html +10pts)
+*/
+
+/* funciones anonimas */
+
+let pedrito = function () {
+  console.log("hola amigos buenas tardes");
+};
+
+pedrito();
+
+/* funciones anonimas q reciben parametros */
+
+let juanito = function (nombre) {
+  console.log("hola " + nombre);
+};
+
+juanito("Kevin");
+/* funciones anonimas q reciben parametros y retornan valores */
+
+let resta = function (a, b) {
+  return a - b;
+};
+
+console.log(resta(10, 5));
+
+/* ---------ARROW FUNCTION--------- */
+
+let mulpiplicar = (a, b) => {
+  return a * b;
+};
+
+console.log(mulpiplicar(2, 6));
+/* --------------------- */
+let duplicar = (x) => x * 2;
+
+console.log(duplicar(4));
+
+let arrays = [1, 2, 3, 4];
+/* 
+  REALIZAR UNA CALCULADORA CON UN MENU
+  MULTIPLICAR
+  SUMAR
+  RESTAR
+  DIVIDIR
+  2 NUMEROS
+  vamos a crear arrowfunction para cada operacion y hacer uso de ellas 
 */
