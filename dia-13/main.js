@@ -179,6 +179,7 @@ let duplicar = (x) => x * 2;
 console.log(duplicar(4));
 
 let arrays = [1, 2, 3, 4];
+
 /* 
   REALIZAR UNA CALCULADORA CON UN MENU
   MULTIPLICAR
