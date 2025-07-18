@@ -1,4 +1,4 @@
-let estudiantes = [
+/* let estudiantes = [
   {
     nombre: "kevin",
     pais: "Bolivia",
@@ -36,15 +36,39 @@ for (let i = 0; i < estudiantes.length; i++) {
             </a>
             `;
   }
-}
+} */
 
 /* trabajo MOSTRAR UNICAMENTE  A LOS ESTUDIANTES DE ARGENTINA y  ademas tengan 18 años DE FORMA DINAMICA */
 /* ------------------------ */
 const productos = [
-  { id: 1, nombre: "Helado de vainilla", precio: 10, stock: 3 },
-  { id: 2, nombre: "Helado de chocolate", precio: 12, stock: 0 },
-  { id: 3, nombre: "Helado de fresa", precio: 11, stock: 2 },
-  { id: 4, nombre: "Helado de limón", precio: 9, stock: 1 },
+  {
+    id: 1,
+    nombre: "Helado de vainilla",
+    precio: 10,
+    stock: 3,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYL73VZJEtt9EYJT9PwfjJCgbJDVigAr90SA&s",
+  },
+  {
+    id: 2,
+    nombre: "Helado de chocolate",
+    precio: 12,
+    stock: 0,
+    img: "https://easyways.cl/storage/20210330080108helado-de-chocolate.jpg",
+  },
+  {
+    id: 3,
+    nombre: "Helado de fresa",
+    precio: 11,
+    stock: 2,
+    img: "https://i.ytimg.com/vi/cYIUuoAKpxg/maxresdefault.jpg",
+  },
+  {
+    id: 4,
+    nombre: "Helado de limón",
+    precio: 9,
+    stock: 1,
+    img: "https://www.cocinadelirante.com/sites/default/files/images/2019/04/receta-facil-de-helado-de-limon.jpg",
+  },
 ];
 
 /*  Mostrar todos los productos en una lista.
@@ -58,3 +82,25 @@ Precio
 Stock disponible
 
 Botón "Comprar"*/
+let tabla = document.querySelector("#cuerpo-tabla");
+tabla.innerHTML = "";
+for (let i = 0; i < productos.length; i++) {
+  tabla.innerHTML += `<tr
+            class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200"
+          >
+            <th class="p-2">
+             <img src="${productos[i].img}" alt="" class="rounded-2xl h-36 w-64">
+            </th>
+            <th
+              scope="row"
+              class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            >
+              ${productos[i].nombre}
+            </th>
+            <td class="px-6 py-4">${productos[i].precio}</td>
+            <td class="px-6 py-4">${productos[i].stock}</td>
+            <td class="px-6 py-4">
+              <button class="bg-green-700 text-white p-2 rounded-2xl m-4">Comprar</button>
+            </td>
+          </tr>`;
+}
