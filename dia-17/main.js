@@ -16,7 +16,7 @@
         y abajo tendran una imagen de fiona si el boton esta en dia fiona es princesa
         pero si el boton esta en noche fiona es un ogro
 */
-let todo = document.querySelector("#todo");
+/* let todo = document.querySelector("#todo");
 let botonD = document.querySelector("#btn-dia");
 let ogra = document.querySelector("#ogro");
 let princesa = document.querySelector("#princesa");
@@ -38,3 +38,31 @@ botonD.addEventListener("click", function (e) {
     princesa.classList.add("hidden");
   }
 });
+ */
+/* -----------------SUBMIT--------------------- */
+/* let form = document.querySelector("#formulario");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let obj = {};
+  let nombre = document.querySelector("#Nombre");
+  console.log("formulario enviado por : " + nombre.value);
+  obj.name = nombre.value;
+  obj.apellido = "Aguilar";
+  console.log(obj);
+}); */
+/* ----------------input--------------- */
+let inputText = document.querySelector("#campo");
+let parrafito = document.getElementById("resultadoInput");
+inputText.addEventListener("input", function (e) {
+  console.log(e.target.value);
+  parrafito.textContent = e.target.value;
+});
+
+/* 
+ crear un formulario donde pidan el 
+ nombre 
+ el apellido paterno 
+ la edad y la nacionalidad y 
+ agregarlo a un objeto y mostrar el objeto en consola
+*/
