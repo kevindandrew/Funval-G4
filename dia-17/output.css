@@ -791,12 +791,6 @@
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
   }
-  .bg-yellow-600 {
-    background-color: var(--color-yellow-600);
-  }
-  .bg-yellow-800 {
-    background-color: var(--color-yellow-800);
-  }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -1008,6 +1002,9 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
   }
   .text-green-800 {
     color: var(--color-green-800);
@@ -1674,11 +1671,6 @@
   .dark\:bg-black {
     &:where(.dark, .dark *) {
       background-color: var(--color-black);
-    }
-  }
-  .dark\:bg-cyan-700 {
-    &:where(.dark, .dark *) {
-      background-color: var(--color-cyan-700);
     }
   }
   .dark\:bg-gray-700 {

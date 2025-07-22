@@ -52,12 +52,12 @@ form.addEventListener("submit", function (e) {
   console.log(obj);
 }); */
 /* ----------------input--------------- */
-let inputText = document.querySelector("#campo");
+/* let inputText = document.querySelector("#campo");
 let parrafito = document.getElementById("resultadoInput");
 inputText.addEventListener("input", function (e) {
   console.log(e.target.value);
   parrafito.textContent = e.target.value;
-});
+}); */
 
 /* 
  crear un formulario donde pidan el 
@@ -66,3 +66,21 @@ inputText.addEventListener("input", function (e) {
  la edad y la nacionalidad y 
  agregarlo a un objeto y mostrar el objeto en consola
 */
+
+/* ----------Change------------ */
+let contador = 0;
+let anterior = "";
+let opcionColor = document.querySelector("#selectorColor");
+
+opcionColor.addEventListener("change", function (e) {
+  let parrafo = document.querySelector("#colorTexto");
+  if (contador === 0) {
+    parrafo.classList.add(`text-${e.target.value}-700`);
+    anterior = `text-${e.target.value}-700`;
+    contador++;
+  } else {
+    parrafo.classList.replace(anterior, `text-${e.target.value}-700`);
+    anterior = `text-${e.target.value}-700`;
+    contador++;
+  }
+});
