@@ -95,7 +95,7 @@ inputsito.addEventListener("keyup", function (e) {
 }); */
 
 /* ----------------------mouseover/mouseout--------------------- */
-let cuadro = document.querySelector("#cuadro");
+/* let cuadro = document.querySelector("#cuadro");
 
 cuadro.addEventListener("mouseover", function (e) {
   this.classList.replace("bg-green-600", "bg-red-800");
@@ -105,4 +105,16 @@ cuadro.addEventListener("mouseover", function (e) {
 cuadro.addEventListener("mouseout", function (e) {
   this.classList.replace("bg-red-800", "bg-green-600");
   this.classList.replace("rounded-none", "rounded-2xl");
+}); */
+/* -------------modal------------- */
+let abrir = document.querySelector("#abrirModal");
+let cerrar = document.querySelector("#cerrarModal");
+let modal = document.querySelector("#modal");
+
+abrir.addEventListener("click", function () {
+  modal.classList.remove("hidden");
+});
+
+cerrar.addEventListener("click", function () {
+  modal.classList.add("hidden");
 });
