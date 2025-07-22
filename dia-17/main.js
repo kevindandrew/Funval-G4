@@ -68,7 +68,7 @@ inputText.addEventListener("input", function (e) {
 */
 
 /* ----------Change------------ */
-let contador = 0;
+/* let contador = 0;
 let anterior = "";
 let opcionColor = document.querySelector("#selectorColor");
 
@@ -81,6 +81,28 @@ opcionColor.addEventListener("change", function (e) {
   } else {
     parrafo.classList.replace(anterior, `text-${e.target.value}-700`);
     anterior = `text-${e.target.value}-700`;
-    contador++;
   }
+}); */
+/* -----------------KEYDOWN/KEYUP----------------------------------- */
+
+/* let inputsito = document.querySelector("#teclado");
+let parrafo = document.querySelector("#mensajeUsuario");
+inputsito.addEventListener("keydown", function (e) {
+  parrafo.textContent = "tecla presionada " + e.key;
+});
+inputsito.addEventListener("keyup", function (e) {
+  parrafo.textContent = "tecla presionada " + e.key;
+}); */
+
+/* ----------------------mouseover/mouseout--------------------- */
+let cuadro = document.querySelector("#cuadro");
+
+cuadro.addEventListener("mouseover", function (e) {
+  this.classList.replace("bg-green-600", "bg-red-800");
+  this.classList.replace("rounded-2xl", "rounded-none");
+});
+
+cuadro.addEventListener("mouseout", function (e) {
+  this.classList.replace("bg-red-800", "bg-green-600");
+  this.classList.replace("rounded-none", "rounded-2xl");
 });
