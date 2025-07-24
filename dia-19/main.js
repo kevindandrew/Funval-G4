@@ -133,3 +133,148 @@ let estudiantesFunval = [
   { nombre: "Benjamin", pais: "Argentina", edad: 32, mision: true },
   { nombre: "Jeff", pais: "Peru" },
 ];
+
+/* -----------------propagacion de OBJETOS/ARRAYS--------------------- */
+let A = [10, 32, 45, 67];
+let B = ["kevin", "juan", "pedro"];
+//copia
+let arrayKevin = [...A];
+console.log(arrayKevin);
+//combinacion de 2 o mas arrays
+let C = [...A, ...B];
+console.log(C);
+//CREACION DE UN ARRAY NUEVO APARTIR DE UNO EXISTENTE
+let D = [...A, 1, 2, 3, 4, 5, 6, ...B];
+console.log(D);
+/* --------------------------------------------------------------- */
+
+let persona = {
+  nombre: "Clark kent",
+  edad: 21,
+  profesion: "periodista",
+};
+let superhero = {
+  nombreSuper: "Superman",
+  habilidades: "super fuerza",
+  edad: 33,
+  profesion: "super heroe",
+};
+///copia del objeto
+let personaCopia = { ...persona };
+///combinar 2 o mas objetos
+let superPersona = { ...persona, ...superhero };
+///crear un objeto nuevo apartir de uno existente
+let supervillano = { ...persona, maldad: "100%", ciudad: "metropolis" };
+console.log(supervillano);
+/* ---------------------------------------- */
+let persona2 = {
+  nombre: "Kevin",
+  edad: 28,
+  pais: "Bolivia",
+  ci: 12765322,
+  telefono: 78768015,
+};
+
+let profesor = {
+  materia: "desarrollo web",
+  edad: 34,
+  identificador: 3358005012,
+};
+
+let resultado = { ...persona2, ...profesor };
+
+let contenedor = document.querySelector("#contenedor-estudiantes");
+
+contenedor.innerHTML = `
+<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${resultado.nombre}</h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">edad: ${resultado.edad}</p>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">identificador: ${resultado.identificador} -  materia:${resultado.materia}</p>
+    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">telefono: ${resultado.telefono}</p>
+    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        mandar mensaje
+        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+        </svg>
+    </a>
+</div>
+`;
+/* ------------------------------------------------ */
+import { cuadrado, habilidades, proyectos } from "./funciones.js";
+let lcuadrado = 24;
+console.log(habilidades);
+console.log(proyectos);
+console.log(cuadrado(lcuadrado));
+/* 
+Hola equipo de desarrollo:
+Mi nombre es Kevin R. y necesito que desarrollen un simulador de una 
+tienda virtual simple que funcione en el navegador y esté 
+hecho completamente en JavaScript moderno.
+
+Quiero un código bien organizado, dividido en módulos (import/export), y que responda a acciones del usuario (eventos).
+
+ Requerimientos del sistema
+1.  Catálogo de productos
+Debe haber al menos 6 productos (cada uno con: id, nombre, precio, categoría).
+
+Mostrar los productos en una lista o tarjetas dentro del HTML.
+
+Cada producto debe tener un botón para agregarlo al carrito.
+
+Toda la lista de productos debe estar en un archivo llamado products.js.
+
+2. Carrito de compras
+Crear un objeto o array que represente el carrito.
+
+Al hacer clic en “Agregar al carrito”, el producto debe añadirse al carrito.
+
+Mostrar el contenido del carrito en pantalla:
+
+Nombre del producto
+
+Precio unitario
+
+Cantidad
+
+Precio total del producto (precio * cantidad)
+
+Permitir quitar productos del carrito con un botón.
+
+Este comportamiento debe estar manejado en el archivo cart.js.
+
+3. Total y descuentos
+Calcular y mostrar el total de la compra.
+
+Si el total supera los $1000, aplicar un 10% de descuento.
+
+El cálculo debe estar en un archivo llamado checkout.js.
+
+4. ✅ Finalizar compra
+Un botón “Finalizar compra” debe:
+
+Mostrar un resumen final (productos, total con y sin descuento).
+
+Vaciar el carrito automáticamente.
+
+Mostrar un mensaje de agradecimiento.
+
+Todo este flujo también debe manejarse en checkout.js.
+
+5. Uso obligatorio de temas vistos
+Módulos (import/export): separar claramente la lógica entre archivos.
+
+Eventos (click): para botones de agregar, quitar y finalizar.(recomendacion usar delegacion de eventos)
+
+Desestructuración: usar al acceder a propiedades de objetos (const { nombre, precio } = producto).
+
+Spread operator(propagacion):
+
+Para clonar productos al agregarlos al carrito.
+
+Para actualizar listas de forma inmutable.
+
+Rest parameters: usarlo en al menos una función, por ejemplo para agregar varios productos al carrito de una vez.
+
+*/

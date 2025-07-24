@@ -446,6 +446,12 @@
     width: calc(var(--spacing) * 96);
     height: calc(var(--spacing) * 96);
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-3\.5 {
+    height: calc(var(--spacing) * 3.5);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -505,6 +511,12 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\.5 {
+    width: calc(var(--spacing) * 3.5);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
