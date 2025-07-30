@@ -129,7 +129,6 @@ const listaEstudiantes = new Promise((resolve, reject) => {
 });
 /* 
     deberan consumir esta promesa para obtener el listado de los estudiantes una vez tengan el listado de estudiantes
-    deberan mostrar con inerHTML EN SU WEB la lista de todos los estudiantes aprobados se considera aprobado cuando
-    el promedio del estudiante es de 51pts pueden mostrarlo usando cards listas tablas etc 
-
+    deberan mostrar con inerHTML o createElement EN SU WEB la lista de todos los estudiantes aprobados se considera aprobado cuando
+    el promedio del estudiante es de 51pts pueden mostrarlo usando cards listas tablas etc.
 */
