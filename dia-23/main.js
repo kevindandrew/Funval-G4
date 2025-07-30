@@ -83,7 +83,7 @@ const Johan = new Promise((resolve, reject) => {
   console.log(juanito);
 }); */
 
-/// CONSUMIR PROMESAS USANDO ASYNC/AWAIT
+/// CONSUMIR PROMESAS USANDO ASYNC/AWAIT///try catch
 
 async function pepitoPerez() {
   let pelisChidas = await Johan;
