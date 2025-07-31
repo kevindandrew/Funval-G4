@@ -1,6 +1,7 @@
 let contenedor = document.querySelector("#pokemons-container");
 
 async function traerpokemones(numeroInicialPokemones) {
+  contenedor.innerHTML = "";
   for (let i = numeroInicialPokemones; i < numeroInicialPokemones + 10; i++) {
     let respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     let data = await respuesta.json();
@@ -47,8 +48,23 @@ function renderizarPokemon({
 }
 
 let next = document.querySelector("#siguiente");
-let contador = 11;
+let contador = 1;
 next.addEventListener("click", function (e) {
-  traerpokemones(contador);
   contador += 10;
+  traerpokemones(contador);
+});
+
+let ant = document.querySelector("#anterior");
+
+ant.addEventListener("click", function (e) {
+  if (contador > 10) {
+    contador -= 10;
+    traerpokemones(contador);
+  }
+});
+
+let menu = document.querySelector("#drpwn");
+let opc = document.querySelector("#opciones");
+menu.addEventListener("click", function (e) {
+  opc.classList.toggle("hidden");
 });
