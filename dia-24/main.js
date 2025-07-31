@@ -5,7 +5,6 @@ async function traerpokemones(numeroInicialPokemones) {
   for (let i = numeroInicialPokemones; i < numeroInicialPokemones + 10; i++) {
     let respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     let data = await respuesta.json();
-    console.log(data);
     renderizarPokemon(data);
   }
 }
@@ -67,4 +66,46 @@ let menu = document.querySelector("#drpwn");
 let opc = document.querySelector("#opciones");
 menu.addEventListener("click", function (e) {
   opc.classList.toggle("hidden");
+});
+
+//let fuego = document.querySelector("#fire");
+let tipos = [
+  "normal",
+  "fighting",
+  "flying",
+  "poison",
+  "ground",
+  "rock",
+  "bug",
+  "ghost",
+  "steel",
+  "fire",
+  "water",
+  "grass",
+  "electric",
+  "psychic",
+  "ice",
+  "dragon",
+  "dark",
+  "fairy",
+];
+
+opc.addEventListener("click", async function (e) {
+  opc.classList.add("hidden");
+  contenedor.innerHTML = "";
+  let busqueda = "";
+  for (let k = 0; k < tipos.length; k++) {
+    if (e.target.closest(`#${tipos[k]}`)) {
+      busqueda = tipos[k];
+    }
+  }
+
+  let respuesta = await fetch(`https://pokeapi.co/api/v2/type/${busqueda}`);
+  let data = await respuesta.json();
+
+  for (let j = 0; j <= 9; j++) {
+    let respuestaPOk = await fetch(`${data.pokemon[j].pokemon.url}`);
+    let datapok = await respuestaPOk.json();
+    renderizarPokemon(datapok);
+  }
 });
